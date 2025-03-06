@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reforming Life Foundation</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f0f8ff; }
+        header { background-color: #ff5733; color: white; padding: 20px; text-align: center; }
+        header h1 { margin: 0; }
+        nav { text-align: center; background-color: #ffbd33; padding: 15px; }
+        nav a { color: white; text-decoration: none; margin: 0 15px; font-weight: bold; }
+        nav a:hover { text-decoration: underline; }
+        .container { padding: 20px; }
+        .section { margin: 40px 0; }
+        h2 { color: #ff5733; }
+        footer { background-color: #ff5733; color: white; text-align: center; padding: 15px; position: fixed; width: 100%; bottom: 0; }
+        .login-form { display: none; text-align: center; }
+        .login-input { margin: 10px 0; padding: 8px; font-size: 16px; width: 200px; }
+        .login-btn { padding: 10px 20px; background-color: #ff5733; color: white; border: none; cursor: pointer; }
+        .login-btn:hover { background-color: #ffbd33; }
+    </style>
+</head>
+<body>
+<header>
+    <h1>Reforming Life Foundation</h1>
+    <p>Empowering helpless kids and women to build a better future</p>
+</header>
+<nav>
+    <a href="#about">About Us</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+    <a href="#login" onclick="showLogin()">Admin Login</a>
+</nav>
+<div class="container">
+    <section id="about" class="section">
+        <h2>About Us</h2>
+        <p>Reforming Life Foundation is dedicated to transforming the lives of helpless children and women. We provide shelter, education, and resources to help them rebuild their lives with dignity and hope.</p>
+    </section>
+    <section id="projects" class="section">
+        <h2>Our Projects</h2>
+        <p>Inspired by similar foundations like Heartstream Foundation, our core programs include:</p>
+        <ul>
+            <li><strong>Safe Haven Program:</strong> Shelter for women and children facing violence.</li>
+            <li><strong>Education for All:</strong> Free education and skill development for kids.</li>
+            <li><strong>Health & Well-being:</strong> Access to healthcare and emotional support.</li>
+        </ul>
+        <img src="https://i.imgur.com/yourimageID.jpg" alt="Children in the orphanage" width="500">
+    </section>
+    <section id="contact" class="section">
+        <h2>Contact Us</h2>
+        <p>Email: reforminglifefoundation@gmail.com</p>
+        <p>Phone: <a href="tel:+13234357309">+1 (323) 435-7309</a></p>
+    </section>
+    <div id="login" class="login-form">
+        <h2>Admin Login</h2>
+        <input type="text" id="username" class="login-input" placeholder="Username" required>
+        <input type="password" id="password" class="login-input" placeholder="Password" required>
+        <button class="login-btn" onclick="checkLogin()">Login</button>
+        <p id="error-message" style="color: red; display: none;">Invalid credentials, please try again.</p>
+    </div>
+</div>
+<footer>
+    <p>© 2024 Reforming Life Foundation - All rights reserved</p>
+</footer>
+<script>
+    function showLogin() { document.getElementById("login").style.display = "block"; }
+    function checkLogin() {
+        var username = document.getElementById("username").value;
+        var password = document.getElementById("password").value;
+        if (username === "Lifefoundation" && password === "El!jah1mfon") {
+            alert("Login successful!");
+            document.getElementById("error-message").style.display = "none";
+        } else {
+            document.getElementById("error-message").style.display = "block";
+        }
+    }
+</script>
+</body>
+</html>
